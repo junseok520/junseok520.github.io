@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://mm.kaist.ac.kr/'>KAIST MMAI Lab</a>. N24 , 291 Daehak-ro, Yuseong-gu, Daejeon. junseok@mmai.io
+subtitle: <a href='https://mm.kaist.ac.kr/'>KAIST MMAI Lab</a>. N24 , 291 Daehak-ro, Yuseong-gu, Daejeon, Republic of Korea.
 
 profile:
   align: right
