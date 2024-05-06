@@ -6,7 +6,7 @@ subtitle: <a href='https://mm.kaist.ac.kr/'>KAIST MMAI Lab</a>. N24 , 291 Daehak
 
 profile:
   align: right
-  image: junseok_icassp.jpg
+  image: junseok_icassp.jpeg
   image_circular: false # crops the image to make it circular
   more_info: >
 
