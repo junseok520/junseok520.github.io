@@ -1,0 +1,49 @@
+name: Compile Overleaf CV PDF
+
+on:
+  push:
+    branches:
+      - main  # 또는 master 브랜치
+    paths:
+      # 1단계에서 설정한 소스 폴더 경로와 일치해야 합니다.
+      - 'assets/cv-source/**'
+
+jobs:
+  compile_and_commit:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. 리포지토리 코드를 체크아웃합니다.
+      - name: Check out repository
+        uses: actions/checkout@v4
+        # git-auto-commit-action이 히스토리를 필요로 할 수 있습니다.
+        with:
+          fetch-depth: 0
+
+      # 2. LaTeX 컴파일 액션을 실행합니다.
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          # !!수정 필요!!: Overleaf 프로젝트의 메인 .tex 파일 경로
+          # 1단계에서 폴더를 'cv-source'로, 메인 파일이 'main.tex'라면
+          root_file: 'assets/cv-source/main.tex' 
+          # 컴파일된 PDF는 액션의 기본 작업 디렉토리 루트에 생성됩니다. (예: main.pdf)
+          
+      # 3. 컴파일된 PDF를 원하는 위치로 이동시키고 이름 변경
+      - name: Prepare PDF for commit
+        run: |
+          # !!수정 필요!!: PDF를 게시할 최종 경로
+          # 예: /assets/pdf/CV.pdf 로 저장
+          mkdir -p assets/pdf
+          # 컴파일 결과물(예: main.pdf)을 원하는 이름과 경로(CV.pdf)로 이동
+          mv main.pdf assets/pdf/CV.pdf
+        
+      # 4. 변경된 PDF 파일을 리포지토리에 자동 커밋
+      - name: Commit updated CV PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Docs: Auto-update CV.pdf from Overleaf source'
+          # !!수정 필요!!: 3단계에서 지정한 최종 PDF 파일 경로
+          file_pattern: 'assets/pdf/CV.pdf'
+          commit_user_name: 'GitHub Actions Bot'
+          commit_email: 'github-actions-bot@users.noreply.github.com'
