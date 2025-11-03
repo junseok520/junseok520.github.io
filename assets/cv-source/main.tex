@@ -1,0 +1,578 @@
+%
+%Academic CV LaTeX Template
+% Author: Dubasi Pavan Kumar
+% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% License: MIT
+%
+% For errors, suggestions, or improvements, please contact:
+% Email: pavankumard.pg19.ma@nitp.ac.in
+%
+
+
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Page layout
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+
+% Hyperlink setup (moved after fancyhdr to address warning)
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+% Custom box settings
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+% URL style
+\urlstyle{same}
+
+% Text alignment
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        % \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.5mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+% Commands for icon sizing and positioning
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+% Font options
+\newcommand{\headerfonti}{\fontfamily{phv}\selectfont} % Helvetica-like (similar to Arial/Calibri)
+\newcommand{\headerfontii}{\fontfamily{ptm}\selectfont} % Times-like (similar to Times New Roman)
+\newcommand{\headerfontiii}{\fontfamily{ppl}\selectfont} % Palatino (elegant serif)
+\newcommand{\headerfontiv}{\fontfamily{pbk}\selectfont} % Bookman (readable serif)
+\newcommand{\headerfontv}{\fontfamily{pag}\selectfont} % Avant Garde-like (similar to Trebuchet MS)
+\newcommand{\headerfontvi}{\fontfamily{cmss}\selectfont} % Computer Modern Sans Serif
+\newcommand{\headerfontvii}{\fontfamily{qhv}\selectfont} % Quasi-Helvetica (another Arial/Calibri alternative)
+\newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
+\newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
+\newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+\begin{document}
+\headerfontiii
+
+% Header
+\begin{center}
+    {\Huge\textbf{Junseok Ahn}}
+\end{center}
+\vspace{-3mm}
+
+\begin{center}
+    \small{
+    +82-10-6671-6505 | \href{mailto:junseok@mmai.io}{junseok@mmai.io} | 
+    \href{https:/junseok520.github.io/}{junseok520.github.io}
+    }
+\end{center}
+\vspace{-6mm}
+
+\begin{center}
+    \small{
+    \socialicon{\aiGoogleScholar} \href{https://scholar.google.com/citations?user=F1ZDPYAAAAAJ&hl}{Google Scholar} |
+    \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/junseok-ahn-3016aa243}{LinkedIn} | 
+    \socialicon{\faGithub} \href{https://github.com/junseok520}{GitHub} | 
+    % \ieeeicon{\includegraphics[height=1.3em]{ieee_collabratec_icon.png}} \href{https://ieee-collabratec.ieee.org/app/p/your-profile}{your-profile} |
+    % \socialicon{\faTwitter} \href{https://x.com/junseokahn520}{Twitter}
+    }
+\end{center}
+\vspace{-6mm}
+\begin{center}
+    \small{Daejeon - 34184, South Korea}
+\end{center}
+
+\vspace{-4mm}
+
+\section{\textbf{Objective}}
+\vspace{1mm}
+\small{
+% Seeking a challenging position in [your field] to leverage my expertise in [your key skills]. Aiming to contribute to innovative projects at the intersection of [your interests] and practical problem-solving in fields such as [specific areas of interest].
+A passionate and driven AI researcher seeking a challenging Research Scientist or Applied Scientist position. Aiming to leverage deep expertise in multimodal deep learning, particularly in generative models for audio-visual synthesis, to contribute to cutting-edge projects in interactive AI, virtual avatars, and human-computer interaction.
+}
+\vspace{-1mm}
+
+
+
+\section{\textbf{Education}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Korea Advanced Institute of Science and Technology (KAIST)}{Daejeon, South Korea}
+{Integrated MS/PhD in Electrical Engineering}{Mar 2023 - Present}
+\resumeItemListStart
+\item Advisor: Joon Son Chung
+\item GPA: 3.98/4.3
+\resumeItemListEnd
+
+\resumeSubheading
+{Korea Advanced Institute of Science and Technology (KAIST)}{Daejeon, South Korea}
+{B.S. in Electrical Engineering}{Mar 2019 - Feb 2023}
+\resumeItemListStart
+\item Graduated Summa Cum Laude (Second in class, Top 1\% of department)
+\item GPA: 4.17/4.3
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+% \section{\textbf{Patents and Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+\section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+\vspace{0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+% \item[\textbf{[C.1]}] Your Name, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX}{\textbf{Title of Conference Paper}}. In \textit{Name of Conference Proceedings}, pp. XX-XX. Publisher. Date, Location. DOI: XX.XXXX/XXXXXXX.XXXX.XXXXXXX
+
+% \item[\textbf{[S.1]}] Your Name, et al. (Year). \textbf{Title of Submitted Paper}. Manuscript submitted for publication in \textit{Journal Name}.
+
+% \item[\textbf{[P.1]}] Inventor 1, Your Name, Inventor 3, et al. (Year). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Title of Patent}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
+
+% \item[\textbf{[J.1]}] Author 1, Your Name, Author 3, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{Title of Journal Article}}. \textit{Journal Name}, Vol. XX, Issue X, pp. XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX
+
+\item[\textbf{[S.1]}] Ji-Hoon Kim*, \textbf{Junseok Ahn}*, Doyeop Kwak, Joon Son Chung, Shinji Watanabe (2025). \href{hhttps://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{TAVID: Text-driven Audio-Visual Interactive Dialogue Generation}}. Manuscript submitted for publication in \textit{Proceedings of the 2025 CVPR}.
+
+\item[\textbf{[J.1]}] Youngjoon Jang, Jeongsoo Choi, \textbf{Junseok Ahn}, Joon Son Chung (2025). \href{https://arxiv.org/abs/2503.03287}{\textbf{Deep Understanding of Sign Language for Sign to Subtitle Alignment}}. Accepted with minor revision in \textit{Transactions on Multimedia}.
+
+\item[\textbf{[C.4]}] Jaemin Jung*, \textbf{Junseok Ahn}*, Chaeyoung Jung, Tan Dat Nguyen, Youngjoon Jang, Joon Son Chung (2025). \href{https://doi.org/10.1109/ICASSP49660.2025.10890322}{\textbf{VoiceDiT: Dual-Condition Diffusion Transformer for Environment-Aware Speech Synthesis}}. In \textit{Proceedings of the 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, IEEE. April 6-11, 2025, Hyderabad, India. 
+% DOI: 10.1109/ICASSP49660.2025.1089
+
+\item[\textbf{[C.3]}] \textbf{Junseok Ahn}, Youkyum Kim, Yeunju Choi, Doyeop Kwak, Ji-Hoon Kim, Seongkyu Mun, Joon Son Chung (2024). \href{https://doi.org/10.21437/Interspeech.2024-646}{\textbf{VoxSim: A perceptual voice similarity dataset}}. In \textit{Proceedings of the 2024 Interspeech}, pp. 2580-2584. IEEE. 1-5 September 2024, Kos Island, Greece. \textcolor{red}{(Nominated as Best Student Paper List)}
+% DOI: 10.21437/Interspeech.2024-646
+
+\item[\textbf{[C.2]}] Youngjoon Jang*, Ji-Hoon Kim*, \textbf{Junseok Ahn}, Doyeop Kwak, Hong-Sun Yang, Yoon-Cheol Ju, Il-Hwan Kim, Byeong-Yeol Kim, Joon Son Chung (2024). \href{https://doi.org/10.1109/CVPR52733.2024.00842}{\textbf{Faces that Speak: Jointly Synthesising Talking Face and Speech from Text}}. In \textit{Proceedings of the 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pp. 8818-8828. IEEE. 16-22 June 2024, Seattle, WA, USA. 
+% DOI: 10.1109/CVPR52733.2024.00842
+
+\item[\textbf{[C.1]}] \textbf{Junseok Ahn}*, Youngjoon Jang*, Joon Son Chung (2024). \href{https://doi.org/10.1109/ICASSP48485.2024.10445841}{\textbf{Slowfast Network for Continuous Sign Language Recognition}}. In \textit{Proceedings of the 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, pp. 3920-3924. IEEE. 14-19 April 2024, Seoul, Republic of Korea. 
+% DOI: 10.1109/ICASSP48485.2024.10445841
+
+\end{enumerate}
+* denotes equal contribution.
+}
+
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  % \resumeSubheading
+  %     {{Company A [\href{https://www.companya.com}{\faIcon{globe}}]}}{City, Country}
+  %     {Job Title A}{Month Year - Month Year}
+  %     \resumeItemListStart
+  %       \item Developed [specific achievement] achieving [specific metric] in [specific area]
+  %       \item Implemented [technology/method], enhancing [specific aspect] by [specific percentage]
+  %       \item Conducted analysis on [specific data], identifying [key findings]
+  %       \item Presented findings at [specific event], receiving [specific recognition]
+  %     \resumeItemListEnd 
+  % \resumeSubheading
+  %   {Company B [\href{https://www.companyb.com}{\faIcon{globe}}]}{Remote}
+  %   {Job Title B}{Month Year - Month Year}
+  %   \resumeItemListStart
+  %     \item Engineered a [specific system/model], improving [specific metric] by [percentage]
+  %     \item Developed [specific tool/method], increasing [specific aspect] by [percentage]
+  %     \item Implemented [specific system], reducing [specific metric] by [percentage]
+  %     \item Conducted [specific test/analysis] to validate [specific aspect]
+  %   \resumeItemListEnd
+  \resumeSubheading
+      {{KAIST Multimodal AI Lab [\href{https://mm.kaist.ac.kr}{\faIcon{globe}}]}}{Daejeon, Republic of Korea}
+      {Undergraduate Researcher participated in \href{https://engineering.kaist.ac.kr/content?menu=61}{KAIST Undergraduate Research Program (URP)}}{Sep 2021 - Feb 2022}
+      \resumeItemListStart
+        \item \textit{Thesis: Development of speaker recognition model in which non-speaker information is separated}
+        % \item Participated \href{https://engineering.kaist.ac.kr/content?menu=61}{Undergraduate Research Program (URP)}
+        \item Developed a speaker recognition framework using adversarial training (GRL) to disentangle language information from speaker embeddings.
+        \item Achieved up to 50\% speaker recognition EER improvement on a custom bilingual test set (VoxCeleb1-B) over baseline models.
+        \item Trained a prerequisite ECAPA-TDNN language ID model, achieving 6.7\% EER on the VoxLingua107 dataset to generate pseudo-labels.
+        \item Verified the effective removal of language-specific information from speaker embeddings, enhancing model robustness in cross-lingual scenarios.
+      \resumeItemListEnd 
+  \resumeSubheading
+      {{Samsung Electronics System LSI [\href{https://semiconductor.samsung.com/processor/modem/}{\faIcon{globe}}]}}{Republic of Korea}
+      {Student Researcher (Intern)}{Sep 2021 - Feb 2022}
+      \resumeItemListStart
+        \item Developed a 5G NR PUSCH (Uplink) MIMO receiver simulator in MATLAB over a 24-week project. 
+        \item Implemented and benchmarked receiver algorithms (Zero Forcing, LMMSE, ML), analyzing BER performance under various Eb/No conditions. 
+        \item Analyzed and simulated 5G NR PHY layer (3GPP) standards, including OFDM characteristics, PAPR reduction techniques, and DMRS estimation.
+      \resumeItemListEnd 
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+
+% \section{\textbf{Projects}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+
+% \resumeProject
+%   {Project A: [Brief Description]}
+%   {Tools: [List of tools and technologies used]}
+%   {Month Year - Month Year}
+%   {{}[\href{https://github.com/your-username/project-a}{\textcolor{darkblue}{\faGithub}}]}
+% \resumeItemListStart
+%   \item Developed [specific feature/system] for [specific purpose]
+%   \item Implemented [specific technology] for [specific goal], achieving [specific result]
+%   \item Created [specific component], ensuring [specific benefit]
+%   \item Applied [specific method] to analyze [specific aspect]
+% \resumeItemListEnd
+
+% \resumeProject
+%   {Project B: [Brief Description]}
+%   {Tools: [List of tools and technologies used]}
+%   {Month Year}
+%   {{}[\href{https://github.com/your-username/project-b}{\textcolor{darkblue}{\faGithub}}]}
+% \resumeItemListStart
+%   \item Developed [specific model/system], achieving [specific metric]
+%   \item Implemented [specific feature], processing [specific volume] of data
+%   \item Created [specific visualization] for [specific purpose]
+%   \item Developed [specific component] for easy integration with [specific system]
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+
+\section{\textbf{Skills}}
+% \vspace{-0.4mm}
+ \resumeHeadingSkillStart
+%   \resumeSubItem{Programming Languages:}
+%     {Language 1, Language 2, Language 3, Language 4, Language 5}
+%   \resumeSubItem{Web Technologies:}
+%     {Technology 1, Technology 2, Technology 3, Technology 4, Technology 5}
+%   \resumeSubItem{Database Systems:}
+%     {Database 1, Database 2, Database 3}
+%   \resumeSubItem{Data Science \& Machine Learning:}
+%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6}
+% \resumeSubItem{Cloud Technologies:}
+%     {Cloud Platform 1, Cloud Platform 2, Cloud Platform 3}
+%   \resumeSubItem{DevOps \& Version Control:}
+%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+%   \resumeSubItem{Specialized Area:}
+%     {Skill 1, Skill 2, Skill 3, Skill 4}
+%   \resumeSubItem{Mathematical \& Statistical Tools:}
+%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+%   \resumeSubItem{Other Tools \& Technologies:}
+%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
+%   \resumeSubItem{Research Skills:}{Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6}
+    \resumeSubItem{Programming Languages:}
+        {Python, Pytorch, MATLAB, LaTex}
+    \resumeSubItem{Machine Learning:}
+        {Hugging Face (Transformers, Diffusers, Accelerate), OpenCV, FFmpeg, Librosa}
+
+ \resumeHeadingSkillEnd
+
+\section{\textbf{Honors and Awards}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+% \resumeProject
+%   {Award Name A}
+%   {Awarding Institution/Organization}
+%   {Month Year}
+%   {{}[\href{https://award-link-a.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Brief description of the award and its significance
+%   \item Impact or recognition associated with the award
+% \resumeItemListEnd
+
+% \resumeProject
+%   {Award Name B}
+%   {Awarding Institution/Organization}
+%   {Month Year}
+%   {{}[\href{https://award-link-b.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Brief description of the award and its significance
+%   \item Impact or recognition associated with the award
+% \resumeItemListEnd
+
+% \resumeProject
+%   {Competition Achievement}
+%   {Competition Name, Organizing Body}
+%   {Month Year}
+%   {{}[\href{https://competition-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Specific achievement or rank in the competition
+%   \item Skills or abilities demonstrated through this achievement
+% \resumeItemListEnd
+
+\resumeProject
+  {Best Teaching Assistant Award}
+  {KAIST EE Department}
+  {Mar 2025}
+  {}
+\resumeItemListStart
+  \item Selected as best teaching assistant in 2024 Fall semester
+  \item Teaching course: EE488 Deep Learning for Visual Understanding
+\resumeItemListEnd
+
+\resumeProject
+  {Dean's List}
+  {KAIST}
+  {Sep 2019, Sep 2020, Sep 2021}
+  {}
+\resumeItemListStart
+  \item Awarded Dean's List on Spring 2019, Spring 2020, Spring 2021 semesters
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% \vspace{-6mm}
+% \section{\textbf{Leadership Experience}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumeProject
+%   {Leadership Role A}
+%   {Organization/Institution Name}
+%   {Month Year - Month Year}
+%   {{}[\href{https://organization-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Key responsibility or achievement in this role
+%   \item Quantifiable impact or improvement made during tenure
+%   \item Initiative taken or project led
+% \resumeItemListEnd
+
+% \resumeProject
+%   {Leadership Role B}
+%   {Organization/Institution Name}
+%   {Month Year - Month Year}
+%   {{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Key responsibility or achievement in this role
+%   \item Quantifiable impact or improvement made during tenure
+%   \item Initiative taken or project led
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+
+% \vspace{-6mm}
+
+% \section{\textbf{Volunteer Experience}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumeProject
+%   {Volunteer Role A}
+%   {Organization Name}
+%   {Month Year - Month Year}
+%   {{}[\href{https://volunteer-org-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Key responsibility or contribution in this role
+%   \item Impact of your volunteer work
+%   \item Skills developed or applied during this experience
+% \resumeItemListEnd
+
+% \resumeProject
+%   {Volunteer Role B}
+%   {Organization Name}
+%   {Month Year - Present}
+%   {{}[\href{https://volunteer-org-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+% \resumeItemListStart
+%   \item Key responsibility or contribution in this role
+%   \item Impact of your volunteer work
+%   \item Skills developed or applied during this experience
+% \resumeItemListEnd
+
+% \resumeSubHeadingListEnd
+% \vspace{-6mm}
+
+% \section{\textbf{Professional Memberships}}
+% \vspace{-0.4mm}
+% \resumeSubHeadingListStart
+% \resumePOR{Professional Organization A}
+%     {, Membership ID: XXXXXXXX}
+%     {Month Year - Present}
+% \resumePOR{Professional Organization B}
+%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
+%     {Month Year - Present}
+% \resumePOR{Professional Organization C}
+%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
+%     {Month Year - Present}
+
+% \resumeSubHeadingListEnd
+% \vspace{-6mm}
+
+% \section{\textbf{Certifications}}
+% \vspace{-0.2mm}
+% \resumeSubHeadingListStart
+% \resumePOR{}{\href{https://certification-link-a.com}{
+% \textbf{Certification A}
+% }}{Month Year}
+% \resumePOR{}{
+% \textbf{Certifying Body:} {{\href{https://certification-link-b.com}{Certification B}}}}{Month Year}
+% \resumePOR{}{
+% \textbf{Certifying Body:} {{\href{https://certification-link-c.com}{Certification C}}}}{Month Year}
+% \resumePOR{}{\href{https://certification-link-d.com}{
+% \textbf{Certification D}
+% }}{Month Year}
+
+% \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+\section{\textbf{Teaching Experience}}
+\vspace{-0.4mm}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {EE738 Speech Recognition System}{}
+      {Teaching Assistant}{Spring 2023, Spring 2024}
+      \resumeItemListStart
+        \item Head TA in Spring 2024
+      \resumeItemListEnd 
+  \resumeSubheading
+      {EE488 Deep Learning in Visual Understanding}{}
+      {Teaching Assistant}{Fall 2023, Fall 2024}
+      \resumeItemListStart
+        \item Head TA in Fall 2024
+        \item Got Best TA Award in Fall 2024
+      \resumeItemListEnd 
+  \resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\section{\textbf{Additional Information}}
+\vspace{-0.4mm}
+\small{
+% \textbf{Languages:} Language A (Proficiency level), Language B (Proficiency level), Language C (Proficiency level)
+
+% \textbf{Interests:} Interest 1, Interest 2, Interest 3, Interest 4
+% }
+\textbf{Languages:} Korean (native), English (fluent)
+}
+\vspace{-1mm}
+
+
+\section{\textbf{References}}
+\vspace{-0.2mm}
+\small{
+\begin{enumerate}[leftmargin=*,labelsep=2mm]
+% \item \textbf{Reference Person 1}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email1@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Thesis Advisor, Manager, etc.]}
+
+% \item \textbf{Reference Person 2}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email2@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Project Supervisor, Colleague, etc.]}
+
+% \item \textbf{Reference Person 3}\\
+%    Job Title, Department\\
+%    Organization/Institution Name\\
+%    Email: email3@example.com\\
+%    Phone: +X-XXX-XXX-XXXX\\
+%    \textit{Relationship: [e.g., Mentor, Collaborator, etc.]}
+
+\item \textbf{Joon Son Chung}\\
+   Associate Professor, Electrical Engineering\\
+   Korea Advanced Institute of Science and Technology (KAIST) \\
+   Email: joonsonchung@gmail.com\\
+   % Phone: +X-XXX-XXX-XXXX\\
+   \textit{Relationship: PhD advisor at KAIST}
+
+\end{enumerate}
+}
+
+\end{document}
