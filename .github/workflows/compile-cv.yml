@@ -11,6 +11,9 @@ on:
 jobs:
   compile_and_commit:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
     
     steps:
       # 1. 리포지토리 코드를 체크아웃합니다.
@@ -46,4 +49,4 @@ jobs:
           # !!수정 필요!!: 3단계에서 지정한 최종 PDF 파일 경로
           file_pattern: 'assets/pdf/CV.pdf'
           commit_user_name: 'GitHub Actions Bot'
-          commit_email: 'github-actions-bot@users.noreply.github.com'
+          commit_user_email: 'github-actions-bot@users.noreply.github.com'
