@@ -159,6 +159,9 @@ body.dark-mode * {
     border: 2px dashed #ccc;
     border-radius: 0.5rem;
     overflow: hidden;     /* 이미지가 넘치면 숨김 */
+    display: flex;        /* flexbox 활성화 */
+    align-items: center;  /* 수직 중간 정렬 */
+    justify-content: center; /* 수평 중간 정렬 */
 }
 
 .pub-thumbnail-image img {
