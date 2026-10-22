@@ -7,6 +7,7 @@ on:
     paths:
       # 1단계에서 설정한 소스 폴더 경로와 일치해야 합니다.
       - 'assets/cv-source/**'
+  workflow_dispatch:
 
 jobs:
   compile_and_commit:
