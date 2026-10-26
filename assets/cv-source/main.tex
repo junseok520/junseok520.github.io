@@ -38,14 +38,15 @@
 \definecolor{darkblue}{RGB}{0,0,139}
 
 % Page layout
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
 \setlength{\multicolsep}{0pt} 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+% \fancyfoot{}
+\fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
-\setlength{\footskip}{5pt} % Addressing fancyhdr warning
+% \setlength{\footskip}{5pt} % Addressing fancyhdr warning
 
 % Hyperlink setup (moved after fancyhdr to address warning)
 \usepackage[hidelinks]{hyperref}
@@ -95,7 +96,7 @@
 \newcommand{\resumePOR}[3]{
 \vspace{0.5mm}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small #3} 
     \end{tabular*}
     \vspace{-2mm}
 }
@@ -169,15 +170,15 @@
 \vspace{-3mm}
 
 \begin{center}
-    \small{
+    {\small
     +82-10-6671-6505 | \href{mailto:junseok@mmai.io}{junseok@mmai.io} | 
-    \href{https:/junseok520.github.io/}{junseok520.github.io}
+    \href{https://junseok520.github.io/}{junseok520.github.io}
     }
 \end{center}
 \vspace{-6mm}
 
 \begin{center}
-    \small{
+    {\small
     \socialicon{\aiGoogleScholar} \href{https://scholar.google.com/citations?user=F1ZDPYAAAAAJ&hl}{Google Scholar} |
     \socialicon{\faLinkedin} \href{https://www.linkedin.com/in/junseok-ahn-3016aa243}{LinkedIn} | 
     \socialicon{\faGithub} \href{https://github.com/junseok520}{GitHub}
@@ -187,18 +188,28 @@
 \end{center}
 \vspace{-6mm}
 \begin{center}
-    \small{Daejeon - 34184, South Korea}
+    {\small Daejeon - 34184, South Korea}
 \end{center}
 
 \vspace{-4mm}
 
-\section{\textbf{Objective}}
+\section{\textbf{Research Interests}}
 \vspace{1mm}
-\small{
+{\small
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
 % Seeking a challenging position in [your field] to leverage my expertise in [your key skills]. Aiming to contribute to innovative projects at the intersection of [your interests] and practical problem-solving in fields such as [specific areas of interest].
-A passionate and driven AI researcher seeking a challenging Research Scientist or Applied Scientist position. Aiming to leverage deep expertise in multimodal deep learning, particularly in generative models for audio-visual synthesis, to contribute to cutting-edge projects in interactive AI, virtual avatars, and human-computer interaction.
+% A passionate and driven AI researcher seeking a challenging Research Scientist or Applied Scientist position. Aiming to leverage deep expertise in multimodal deep learning, particularly in generative models for audio-visual synthesis, to contribute to cutting-edge projects in interactive AI, virtual avatars, and human-computer interaction.
+% My research interests lie in multimodal learning and generative modeling for natural human–-AI interaction. I aim to develop expressive, context-aware conversational agents that integrate audio, vision, and language to generate coordinated speech and facial behavior, with an emphasis on joint audio-visual modeling and efficient streaming generation. I am also interested in reliable evaluation methods for multimodal generative and interactive systems, including generation quality, cross-modal consistency, contextual appropriateness, and the naturalness of conversational behavior.
+My research focuses on multimodal learning and generative modeling
+for natural human--AI interaction, particularly joint audio--visual
+generation and efficient streaming conversational agents.
+I am also interested in evaluating the quality, cross-modal
+consistency, and contextual appropriateness of generated speech
+and facial behavior.
+\par
 }
-\vspace{-1mm}
+\vspace{-2mm}
 
 
 
@@ -208,19 +219,20 @@ A passionate and driven AI researcher seeking a challenging Research Scientist o
 
 \resumeSubheading
 {Korea Advanced Institute of Science and Technology (KAIST)}{Daejeon, South Korea}
-{Integrated MS/PhD in Electrical Engineering}{Mar 2023 - Present}
+{Integrated MS/PhD in Electrical Engineering}{Mar 2023 -- Present}
 \vspace{1mm}
 \resumeItemListStart
 \item Advisor: Joon Son Chung
+\item Expected graduation: Feb 2028
 % \item GPA: 3.98/4.3
 \resumeItemListEnd
 
 \resumeSubheading
 {Korea Advanced Institute of Science and Technology (KAIST)}{Daejeon, South Korea}
-{BS in Electrical Engineering}{Mar 2019 - Feb 2023}
+{BS in Electrical Engineering}{Mar 2019 -- Feb 2023}
 \vspace{1mm}
 \resumeItemListStart
-\item Graduated Summa Cum Laude (Second in class, Top 1\% of department)
+\item Summa Cum Laude; ranked 2nd among KAIST's 2023 bachelor's graduates
 \item GPA: 4.17/4.3
 \resumeItemListEnd
 
@@ -229,144 +241,199 @@ A passionate and driven AI researcher seeking a challenging Research Scientist o
 
 
 % \section{\textbf{Patents and Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
-\section{\textbf{Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+\section{\textbf{Publications} \hfill 
+    \textcolor{darkblue}{%
+    \scriptsize C=Conference, J=Journal, S=Submitted}}
 \vspace{0.2mm}
-\small{
-\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
-% \item[\textbf{[C.1]}] Your Name, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX}{\textbf{Title of Conference Paper}}. In \textit{Name of Conference Proceedings}, pp. XX-XX. Publisher. Date, Location. DOI: XX.XXXX/XXXXXXX.XXXX.XXXXXXX
+{\small
+\begin{enumerate}[
+    leftmargin=*, 
+    labelsep=0.5em, 
+    align=left, 
+    widest={\textbf{[S.1]}}, 
+    itemindent=0em,
+    itemsep=5pt,
+    parsep=0pt,
+    topsep=2pt
+]
 
-% \item[\textbf{[S.1]}] Your Name, et al. (Year). \textbf{Title of Submitted Paper}. Manuscript submitted for publication in \textit{Journal Name}.
+\item[\textbf{[S.4]}]
+\href{https://arxiv.org/abs/2610.32214}{\textbf{DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation}}\\
+Jeongsoo Choi, \textbf{Junseok Ahn}, Joon Son Chung\\
+\textit{arXiv preprint}, 2026
 
-% \item[\textbf{[P.1]}] Inventor 1, Your Name, Inventor 3, et al. (Year). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Title of Patent}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
+\item[\textbf{[S.3]}]
+\href{https://arxiv.org/abs/2610.32042}{\textbf{X-Dubbing: Speech-to-Speech Translation under Temporal and Visual Constraints}}\\
+Jeongsoo Choi, Ji-Hoon Kim, \textbf{Junseok Ahn}, Joon Son Chung\\
+\textit{arXiv preprint}, 2026
 
-% \item[\textbf{[J.1]}] Author 1, Your Name, Author 3, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{Title of Journal Article}}. \textit{Journal Name}, Vol. XX, Issue X, pp. XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX
+\item[\textbf{[S.2]}]
+\href{https://arxiv.org/abs/2610.22499}{\textbf{JAVIS: Joint Audio-Visual Interaction and Streaming for Real-Time Conversational Agents}}\\
+\textbf{Junseok Ahn}, Jaehyun Park, Jeongsoo Choi, Joon Son Chung, Ji-Hoon Kim\\
+\textit{arXiv preprint}, 2026
 
-\item[\textbf{[S.2]}] \textbf{Junseok Ahn}, Jaehyun Park, Jeongsoo Choi, Joon Son Chung, Ji-Hoon Kim (2026). \href{https://arxiv.org/abs/2610.22499}{\textbf{JAVIS: Joint Audio-Visual Interaction and Streaming for Real-Time Conversational Agents}}.
+\item[\textbf{[S.1]}]
+\href{https://arxiv.org/abs/2512.20296}{\textbf{TAVID: Text-driven Audio-Visual Interactive Dialogue Generation}}\\
+Ji-Hoon Kim*, \textbf{Junseok Ahn}*, Doyeop Kwak, Joon Son Chung, Shinji Watanabe\\
+\textit{arXiv preprint}, 2025
 
-\item[\textbf{[S.1]}] Ji-Hoon Kim*, \textbf{Junseok Ahn}*, Doyeop Kwak, Joon Son Chung, Shinji Watanabe (2025). \href{https://arxiv.org/abs/2512.20296}{\textbf{TAVID: Text-driven Audio-Visual Interactive Dialogue Generation}}.
+\item[\textbf{[J.1]}]
+\href{https://ieeexplore.ieee.org/document/11433085}{\textbf{Deep Understanding of Sign Language for Sign to Subtitle Alignment}}\\
+Youngjoon Jang, Jeongsoo Choi, \textbf{Junseok Ahn}, Joon Son Chung\\
+\textit{IEEE Transactions on Multimedia}, 2026
 
-\item[\textbf{[J.1]}] Youngjoon Jang, Jeongsoo Choi, \textbf{Junseok Ahn}, Joon Son Chung (2025). \href{https://arxiv.org/abs/2503.03287}{\textbf{Deep Understanding of Sign Language for Sign to Subtitle Alignment}}. Accepted in the \textit{IEEE Transactions on Multimedia}.
+\item[\textbf{[C.4]}]
+\href{https://doi.org/10.1109/ICASSP49660.2025.10890322}{\textbf{VoiceDiT: Dual-Condition Diffusion Transformer for Environment-Aware Speech Synthesis}}\\
+Jaemin Jung*, \textbf{Junseok Ahn}*, Chaeyoung Jung, Tan Dat Nguyen, Youngjoon Jang, Joon Son Chung\\
+\textit{ICASSP}, 2025
+\enspace\textperiodcentered\enspace Oral presentation
 
-\item[\textbf{[C.4]}] Jaemin Jung*, \textbf{Junseok Ahn}*, Chaeyoung Jung, Tan Dat Nguyen, Youngjoon Jang, Joon Son Chung (2025). \href{https://doi.org/10.1109/ICASSP49660.2025.10890322}{\textbf{VoiceDiT: Dual-Condition Diffusion Transformer for Environment-Aware Speech Synthesis}}. In \textit{Proceedings of the 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, IEEE. April 6-11, 2025, Hyderabad, India. (oral presentation)
-% DOI: 10.1109/ICASSP49660.2025.1089
-
-\item[\textbf{[C.3]}] \textbf{Junseok Ahn}, Youkyum Kim, Yeunju Choi, Doyeop Kwak, Ji-Hoon Kim, Seongkyu Mun, Joon Son Chung (2024). \href{https://doi.org/10.21437/Interspeech.2024-646}{\textbf{VoxSim: A perceptual voice similarity dataset}}. In \textit{Proceedings of the 2024 Interspeech}, pp. 2580-2584. IEEE. 1-5 September 2024, Kos Island, Greece. \textcolor{red}{(Nominated as Best Student Paper List)}
+\item[\textbf{[C.3]}]
+\href{https://doi.org/10.21437/Interspeech.2024-646}{\textbf{VoxSim: A perceptual voice similarity dataset}}\\
+\textbf{Junseok Ahn}, Youkyum Kim, Yeunju Choi, Doyeop Kwak, Ji-Hoon Kim, Seongkyu Mun, Joon Son Chung\\
+\textit{Interspeech}, 2024
+\enspace\textperiodcentered\enspace
+\textbf{Best Student Paper Award Nominee}
 % DOI: 10.21437/Interspeech.2024-646
 
-\item[\textbf{[C.2]}] Youngjoon Jang*, Ji-Hoon Kim*, \textbf{Junseok Ahn}, Doyeop Kwak, Hong-Sun Yang, Yoon-Cheol Ju, Il-Hwan Kim, Byeong-Yeol Kim, Joon Son Chung (2024). \href{https://doi.org/10.1109/CVPR52733.2024.00842}{\textbf{Faces that Speak: Jointly Synthesising Talking Face and Speech from Text}}. In \textit{Proceedings of the 2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pp. 8818-8828. IEEE. 16-22 June 2024, Seattle, WA, USA. 
+\item[\textbf{[C.2]}]
+\href{https://doi.org/10.1109/CVPR52733.2024.00842}{\textbf{Faces that Speak: Jointly Synthesising Talking Face and Speech from Text}}\\
+Youngjoon Jang*, Ji-Hoon Kim*, \textbf{Junseok Ahn}, Doyeop Kwak, Hong-Sun Yang, Yoon-Cheol Ju, Il-Hwan Kim, Byeong-Yeol Kim, Joon Son Chung\\
+\textit{CVPR}, 2024 
 % DOI: 10.1109/CVPR52733.2024.00842
 
-\item[\textbf{[C.1]}] \textbf{Junseok Ahn}*, Youngjoon Jang*, Joon Son Chung (2024). \href{https://doi.org/10.1109/ICASSP48485.2024.10445841}{\textbf{Slowfast Network for Continuous Sign Language Recognition}}. In \textit{Proceedings of the 2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, pp. 3920-3924. IEEE. 14-19 April 2024, Seoul, Republic of Korea. 
+\item[\textbf{[C.1]}] 
+\href{https://doi.org/10.1109/ICASSP48485.2024.10445841}{\textbf{Slowfast Network for Continuous Sign Language Recognition}}\\
+\textbf{Junseok Ahn}*, Youngjoon Jang*, Joon Son Chung\\
+\textit{ICASSP}, 2024
 % DOI: 10.1109/ICASSP48485.2024.10445841
 
 \end{enumerate}
-* denotes equal contribution.
+\noindent * denotes equal contribution.
+\par
 }
+
+% \section{\textbf{Experience}}
+% \vspace{-0.4mm}
+%   \resumeSubHeadingListStart
+%   % \resumeSubheading
+%   %     {{Company A [\href{https://www.companya.com}{\faIcon{globe}}]}}{City, Country}
+%   %     {Job Title A}{Month Year - Month Year}
+%   %     \resumeItemListStart
+%   %       \item Developed [specific achievement] achieving [specific metric] in [specific area]
+%   %       \item Implemented [technology/method], enhancing [specific aspect] by [specific percentage]
+%   %       \item Conducted analysis on [specific data], identifying [key findings]
+%   %       \item Presented findings at [specific event], receiving [specific recognition]
+%   %     \resumeItemListEnd 
+%   % \resumeSubheading
+%   %   {Company B [\href{https://www.companyb.com}{\faIcon{globe}}]}{Remote}
+%   %   {Job Title B}{Month Year - Month Year}
+%   %   \resumeItemListStart
+%   %     \item Engineered a [specific system/model], improving [specific metric] by [percentage]
+%   %     \item Developed [specific tool/method], increasing [specific aspect] by [percentage]
+%   %     \item Implemented [specific system], reducing [specific metric] by [percentage]
+%   %     \item Conducted [specific test/analysis] to validate [specific aspect]
+%   %   \resumeItemListEnd
+%   \resumeSubheading
+%       {{KAIST Multimodal AI Lab [\href{https://mm.kaist.ac.kr}{\faIcon{globe}}]}}{Daejeon, South Korea}
+%       {Undergraduate Researcher participated in \href{https://engineering.kaist.ac.kr/content?menu=61}{KAIST Undergraduate Research Program (URP)}}{Mar 2022 - Dec 2022}
+%       \vspace{1mm}
+%       \resumeItemListStart
+%         \item \textit{Thesis: Development of speaker recognition model in which non-speaker information is separated}
+%         % \item Participated \href{https://engineering.kaist.ac.kr/content?menu=61}{Undergraduate Research Program (URP)}
+%         \item Developed a speaker recognition framework using adversarial training (GRL) to disentangle language information from speaker embeddings.
+%         \item Achieved up to 50\% speaker recognition EER improvement on a custom bilingual test set (VoxCeleb1-B) over baseline models.
+%         \item Trained a prerequisite ECAPA-TDNN language ID model, achieving 6.7\% EER on the VoxLingua107 dataset to generate pseudo-labels.
+%         \item Verified the effective removal of language-specific information from speaker embeddings, enhancing model robustness in cross-lingual scenarios.
+%       \resumeItemListEnd 
+%   \vspace{10mm}
+%   \resumeSubheading
+%       {{Samsung Electronics System LSI [\href{https://semiconductor.samsung.com/processor/modem/}{\faIcon{globe}}]}}{South Korea}
+%       {Student Researcher (Intern)}{Sep 2021 - Feb 2022}
+%       \vspace{1mm}
+%       \resumeItemListStart
+%         \item Developed a 5G NR PUSCH (Uplink) MIMO receiver simulator in MATLAB over a 24-week project. 
+%         \item Implemented and benchmarked receiver algorithms (Zero Forcing, LMMSE, ML), analyzing BER performance under various Eb/No conditions. 
+%         \item Analyzed and simulated 5G NR PHY layer (3GPP) standards, including OFDM characteristics, PAPR reduction techniques, and DMRS estimation.
+%       \resumeItemListEnd 
+%   \resumeSubHeadingListEnd
+% \vspace{-6mm}
 
 \section{\textbf{Experience}}
 \vspace{-0.4mm}
-  \resumeSubHeadingListStart
-  % \resumeSubheading
-  %     {{Company A [\href{https://www.companya.com}{\faIcon{globe}}]}}{City, Country}
-  %     {Job Title A}{Month Year - Month Year}
-  %     \resumeItemListStart
-  %       \item Developed [specific achievement] achieving [specific metric] in [specific area]
-  %       \item Implemented [technology/method], enhancing [specific aspect] by [specific percentage]
-  %       \item Conducted analysis on [specific data], identifying [key findings]
-  %       \item Presented findings at [specific event], receiving [specific recognition]
-  %     \resumeItemListEnd 
-  % \resumeSubheading
-  %   {Company B [\href{https://www.companyb.com}{\faIcon{globe}}]}{Remote}
-  %   {Job Title B}{Month Year - Month Year}
-  %   \resumeItemListStart
-  %     \item Engineered a [specific system/model], improving [specific metric] by [percentage]
-  %     \item Developed [specific tool/method], increasing [specific aspect] by [percentage]
-  %     \item Implemented [specific system], reducing [specific metric] by [percentage]
-  %     \item Conducted [specific test/analysis] to validate [specific aspect]
-  %   \resumeItemListEnd
-  \resumeSubheading
-      {{KAIST Multimodal AI Lab [\href{https://mm.kaist.ac.kr}{\faIcon{globe}}]}}{Daejeon, Republic of Korea}
-      {Undergraduate Researcher participated in \href{https://engineering.kaist.ac.kr/content?menu=61}{KAIST Undergraduate Research Program (URP)}}{Mar 2022 - Dec 2022}
-      \vspace{1mm}
-      \resumeItemListStart
-        \item \textit{Thesis: Development of speaker recognition model in which non-speaker information is separated}
-        % \item Participated \href{https://engineering.kaist.ac.kr/content?menu=61}{Undergraduate Research Program (URP)}
-        \item Developed a speaker recognition framework using adversarial training (GRL) to disentangle language information from speaker embeddings.
-        \item Achieved up to 50\% speaker recognition EER improvement on a custom bilingual test set (VoxCeleb1-B) over baseline models.
-        \item Trained a prerequisite ECAPA-TDNN language ID model, achieving 6.7\% EER on the VoxLingua107 dataset to generate pseudo-labels.
-        \item Verified the effective removal of language-specific information from speaker embeddings, enhancing model robustness in cross-lingual scenarios.
-      \resumeItemListEnd 
-  \vspace{10mm}
-  \resumeSubheading
-      {{Samsung Electronics System LSI [\href{https://semiconductor.samsung.com/processor/modem/}{\faIcon{globe}}]}}{Republic of Korea}
-      {Student Researcher (Intern)}{Sep 2021 - Feb 2022}
-      \vspace{1mm}
-      \resumeItemListStart
-        \item Developed a 5G NR PUSCH (Uplink) MIMO receiver simulator in MATLAB over a 24-week project. 
-        \item Implemented and benchmarked receiver algorithms (Zero Forcing, LMMSE, ML), analyzing BER performance under various Eb/No conditions. 
-        \item Analyzed and simulated 5G NR PHY layer (3GPP) standards, including OFDM characteristics, PAPR reduction techniques, and DMRS estimation.
-      \resumeItemListEnd 
-  \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+    {IITP-funded Project: Sign Language Video Anonymization}{Daejeon, South Korea}
+    {Graduate Researcher, KAIST Multimodal AI Lab}
+    {Apr 2025 -- Present}
+    \resumeItemListStart
+        \item Develop avatar-based video anonymization methods
+        for sign language communication, with a focus on
+        preserving hand motion, body pose, and facial expressions.
+    
+        \item Design 3D motion parameter prediction models
+        and integrate them with 3D Gaussian Splatting-based
+        avatar rendering, targeting real-time motion transfer.
+    \resumeItemListEnd
+
+    \resumeSubheading
+    {Samsung Research--KAIST Collaboration [\href{https://research.samsung.com/}{\faIcon{globe}}]}{Daejeon, South Korea}
+    {Graduate Researcher, KAIST Multimodal AI Lab}
+    {Jul 2023 -- Dec 2023}
+    \resumeItemListStart
+        \item Led data curation, perceptual annotation,
+        and quality control for VoxSim
+        (\textit{Interspeech}, 2024).
+    
+        \item Developed and evaluated WavLM- and ECAPA-TDNN-based
+        models for perceptual speaker similarity and
+        synthesized speech quality assessment.
+    
+    \resumeItemListEnd
+    
+    \resumeSubheading
+        {KAIST Multimodal AI Lab [\href{https://mm.kaist.ac.kr}{\faIcon{globe}}]}{Daejeon, South Korea}
+        {Undergraduate Researcher, \href{https://engineering.kaist.ac.kr/content?menu=61}{Undergraduate Research Program (URP)}}
+        {Mar 2022 -- Dec 2022}
+    \resumeItemListStart
+        \item Investigated language-invariant speaker embeddings
+        using adversarial training with gradient reversal,
+        and evaluated cross-lingual speaker verification.
+    \resumeItemListEnd
+    
+    \resumeSubheading
+        {Samsung Electronics, System LSI [\href{https://semiconductor.samsung.com/processor/modem/}{\faIcon{globe}}]}{South Korea}
+        {Student Researcher (Intern)}
+        {Sep 2021 -- Feb 2022}
+    \resumeItemListStart
+        \item Developed a MATLAB simulator for a
+        5G NR PUSCH MIMO receiver.
+        \item Implemented and compared zero-forcing, LMMSE,
+        and maximum-likelihood receiver algorithms
+        through bit error rate evaluation.
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 \vspace{-6mm}
 
-
-% \section{\textbf{Projects}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-
-% \resumeProject
-%   {Project A: [Brief Description]}
-%   {Tools: [List of tools and technologies used]}
-%   {Month Year - Month Year}
-%   {{}[\href{https://github.com/your-username/project-a}{\textcolor{darkblue}{\faGithub}}]}
-% \resumeItemListStart
-%   \item Developed [specific feature/system] for [specific purpose]
-%   \item Implemented [specific technology] for [specific goal], achieving [specific result]
-%   \item Created [specific component], ensuring [specific benefit]
-%   \item Applied [specific method] to analyze [specific aspect]
-% \resumeItemListEnd
-
-% \resumeProject
-%   {Project B: [Brief Description]}
-%   {Tools: [List of tools and technologies used]}
-%   {Month Year}
-%   {{}[\href{https://github.com/your-username/project-b}{\textcolor{darkblue}{\faGithub}}]}
-% \resumeItemListStart
-%   \item Developed [specific model/system], achieving [specific metric]
-%   \item Implemented [specific feature], processing [specific volume] of data
-%   \item Created [specific visualization] for [specific purpose]
-%   \item Developed [specific component] for easy integration with [specific system]
-% \resumeItemListEnd
-
-% \resumeSubHeadingListEnd
-
+\section{\textbf{Academic Service}}
+\vspace{-0.4mm}
+\resumeHeadingSkillStart
+    \resumeSubItem{Conference Reviewer: }
+        {SLT 2026, EMNLP 2026, ICML 2026, ICASSP 2026,
+         ASRU 2025, NeurIPS 2025}
+\resumeHeadingSkillEnd
 
 \section{\textbf{Skills}}
-% \vspace{-0.4mm}
+\vspace{-0.4mm}
  \resumeHeadingSkillStart
-%   \resumeSubItem{Programming Languages:}
-%     {Language 1, Language 2, Language 3, Language 4, Language 5}
-%   \resumeSubItem{Web Technologies:}
-%     {Technology 1, Technology 2, Technology 3, Technology 4, Technology 5}
-%   \resumeSubItem{Database Systems:}
-%     {Database 1, Database 2, Database 3}
-%   \resumeSubItem{Data Science \& Machine Learning:}
-%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6}
-% \resumeSubItem{Cloud Technologies:}
-%     {Cloud Platform 1, Cloud Platform 2, Cloud Platform 3}
-%   \resumeSubItem{DevOps \& Version Control:}
-%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-%   \resumeSubItem{Specialized Area:}
-%     {Skill 1, Skill 2, Skill 3, Skill 4}
-%   \resumeSubItem{Mathematical \& Statistical Tools:}
-%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-%   \resumeSubItem{Other Tools \& Technologies:}
-%     {Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-%   \resumeSubItem{Research Skills:}{Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6}
-    \resumeSubItem{Programming Languages:}
-        {Python, Pytorch, MATLAB, \LaTeX}
-    \resumeSubItem{Machine Learning Tools:}
-        {Hugging Face (Transformers, Diffusers, Accelerate), OpenCV, FFmpeg, Librosa}
+    \resumeSubItem{Programming: }
+        {Python, MATLAB}
+    \resumeSubItem{Frameworks and Libraries: }
+        {PyTorch, Hugging Face (Transformers, Diffusers, Accelerate)}
+    \resumeSubItem{Audio and Video Processing: }
+        {FFmpeg, OpenCV, torchaudio, librosa, Decord, MediaPipe}
 
  \resumeHeadingSkillEnd
 
@@ -374,214 +441,71 @@ A passionate and driven AI researcher seeking a challenging Research Scientist o
 \vspace{-0.4mm}
 \resumeSubHeadingListStart
 
-% \resumeProject
-%   {Award Name A}
-%   {Awarding Institution/Organization}
-%   {Month Year}
-%   {{}[\href{https://award-link-a.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Brief description of the award and its significance
-%   \item Impact or recognition associated with the award
-% \resumeItemListEnd
-
-% \resumeProject
-%   {Award Name B}
-%   {Awarding Institution/Organization}
-%   {Month Year}
-%   {{}[\href{https://award-link-b.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Brief description of the award and its significance
-%   \item Impact or recognition associated with the award
-% \resumeItemListEnd
-
-% \resumeProject
-%   {Competition Achievement}
-%   {Competition Name, Organizing Body}
-%   {Month Year}
-%   {{}[\href{https://competition-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Specific achievement or rank in the competition
-%   \item Skills or abilities demonstrated through this achievement
-% \resumeItemListEnd
-
 \resumeProject
   {Best Teaching Assistant Award}
-  {KAIST EE Department}
+  {KAIST School of Electrical Engineering}
   {Mar 2025}
   {}
 \vspace{1mm}
 \resumeItemListStart
-  \item Selected as best teaching assistant in 2024 Fall semester
-  \item Teaching course: EE488 Deep Learning for Visual Understanding
+  \item EE488 Deep Learning for Visual Understanding (Fall 2024).
 \resumeItemListEnd
 
 \resumeProject
   {Dean's List}
   {KAIST}
-  {Sep 2019, Sep 2020, Sep 2021}
+  {Sep 2021, Sep 2020, Sep 2019}
   {}
 \vspace{1mm}
 \resumeItemListStart
-  \item Awarded Dean's List on Spring 2019, Spring 2020, Spring 2021 semesters
+  \item Recognized for academic excellence in 
+  Spring 2021, Spring 2020, and Spring 2019.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-
-% \vspace{-6mm}
-% \section{\textbf{Leadership Experience}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumeProject
-%   {Leadership Role A}
-%   {Organization/Institution Name}
-%   {Month Year - Month Year}
-%   {{}[\href{https://organization-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or achievement in this role
-%   \item Quantifiable impact or improvement made during tenure
-%   \item Initiative taken or project led
-% \resumeItemListEnd
-
-% \resumeProject
-%   {Leadership Role B}
-%   {Organization/Institution Name}
-%   {Month Year - Month Year}
-%   {{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or achievement in this role
-%   \item Quantifiable impact or improvement made during tenure
-%   \item Initiative taken or project led
-% \resumeItemListEnd
-
-% \resumeSubHeadingListEnd
-
-% \vspace{-6mm}
-
-% \section{\textbf{Volunteer Experience}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumeProject
-%   {Volunteer Role A}
-%   {Organization Name}
-%   {Month Year - Month Year}
-%   {{}[\href{https://volunteer-org-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or contribution in this role
-%   \item Impact of your volunteer work
-%   \item Skills developed or applied during this experience
-% \resumeItemListEnd
-
-% \resumeProject
-%   {Volunteer Role B}
-%   {Organization Name}
-%   {Month Year - Present}
-%   {{}[\href{https://volunteer-org-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-% \resumeItemListStart
-%   \item Key responsibility or contribution in this role
-%   \item Impact of your volunteer work
-%   \item Skills developed or applied during this experience
-% \resumeItemListEnd
-
-% \resumeSubHeadingListEnd
-% \vspace{-6mm}
-
-% \section{\textbf{Professional Memberships}}
-% \vspace{-0.4mm}
-% \resumeSubHeadingListStart
-% \resumePOR{Professional Organization A}
-%     {, Membership ID: XXXXXXXX}
-%     {Month Year - Present}
-% \resumePOR{Professional Organization B}
-%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
-%     {Month Year - Present}
-% \resumePOR{Professional Organization C}
-%     {, \href{https://membership-certificate-link.com}{Membership ID: XXXXXXXX}}
-%     {Month Year - Present}
-
-% \resumeSubHeadingListEnd
-% \vspace{-6mm}
-
-% \section{\textbf{Certifications}}
-% \vspace{-0.2mm}
-% \resumeSubHeadingListStart
-% \resumePOR{}{\href{https://certification-link-a.com}{
-% \textbf{Certification A}
-% }}{Month Year}
-% \resumePOR{}{
-% \textbf{Certifying Body:} {{\href{https://certification-link-b.com}{Certification B}}}}{Month Year}
-% \resumePOR{}{
-% \textbf{Certifying Body:} {{\href{https://certification-link-c.com}{Certification C}}}}{Month Year}
-% \resumePOR{}{\href{https://certification-link-d.com}{
-% \textbf{Certification D}
-% }}{Month Year}
-
-% \resumeSubHeadingListEnd
 \vspace{-6mm}
 
 \section{\textbf{Teaching Experience}}
 \vspace{-0.4mm}
   \resumeSubHeadingListStart
+
   \resumeSubheading
       {EE738 Speech Recognition Systems}{}
-      {Teaching Assistant}{Spring 2023, Spring 2024}
+      {Teaching Assistant, KAIST}{Spring 2026, Spring 2024, Spring 2023}
       \vspace{1mm}
       \resumeItemListStart
-        \item Head TA in Spring 2024
+        \item Served as head teaching assistant in Spring 2024.
       \resumeItemListEnd 
+
   \resumeSubheading
       {EE488 Deep Learning for Visual Understanding}{}
-      {Teaching Assistant}{Fall 2023, Fall 2024}
+      {Teaching Assistant, KAIST}{Fall 2024, Fall 2023}
       \vspace{1mm}
       \resumeItemListStart
-        \item Head TA in Fall 2024
-        \item Got Best TA Award in Fall 2024
+        \item Served as head teaching assistant in Fall 2024.
       \resumeItemListEnd 
   \resumeSubHeadingListEnd
-\vspace{-5mm}
+\vspace{-6mm}
 
 \section{\textbf{Additional Information}}
 \vspace{-0.4mm}
-\small{
-% \textbf{Languages:} Language A (Proficiency level), Language B (Proficiency level), Language C (Proficiency level)
-
-% \textbf{Interests:} Interest 1, Interest 2, Interest 3, Interest 4
-% }
-\textbf{Languages:} Korean (native), English (fluent)
+{\small
+\noindent\textbf{Languages:} Korean (native), English (fluent)\par
 }
 \vspace{-1mm}
 
 
 \section{\textbf{References}}
 \vspace{-0.2mm}
-\small{
+{\small
 \begin{enumerate}[leftmargin=*,labelsep=2mm]
-% \item \textbf{Reference Person 1}\\
-%    Job Title, Department\\
-%    Organization/Institution Name\\
-%    Email: email1@example.com\\
-%    Phone: +X-XXX-XXX-XXXX\\
-%    \textit{Relationship: [e.g., Thesis Advisor, Manager, etc.]}
-
-% \item \textbf{Reference Person 2}\\
-%    Job Title, Department\\
-%    Organization/Institution Name\\
-%    Email: email2@example.com\\
-%    Phone: +X-XXX-XXX-XXXX\\
-%    \textit{Relationship: [e.g., Project Supervisor, Colleague, etc.]}
-
-% \item \textbf{Reference Person 3}\\
-%    Job Title, Department\\
-%    Organization/Institution Name\\
-%    Email: email3@example.com\\
-%    Phone: +X-XXX-XXX-XXXX\\
-%    \textit{Relationship: [e.g., Mentor, Collaborator, etc.]}
 
 \item \href{https://mm.kaist.ac.kr/joon/}{\textbf{Joon Son Chung}}\\
-   Associate Professor, Electrical Engineering\\
+   Associate Professor, School of Electrical Engineering\\
    Korea Advanced Institute of Science and Technology (KAIST) \\
    Email: joonsonchung@gmail.com\\
    % Phone: +X-XXX-XXX-XXXX\\
-   \textit{Relationship: PhD advisor at KAIST}
+   \textit{Relationship: PhD advisor}
 
 \end{enumerate}
 }
