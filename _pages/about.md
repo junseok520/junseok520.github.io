@@ -65,7 +65,7 @@ IEEE Transactions on Multimedia
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">arXiv 2025</div><img src='assets/thumbs/6_tavid.png' alt="TAVID" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[TAVID: Text-Driven Audio-Visual Interactive Dialogue Generation](https://arxiv.org/abs/2512.20296)
+[TAVID: Text-driven Audio-Visual Interactive Dialogue Generation](https://arxiv.org/abs/2512.20296)
 
 Ji-Hoon Kim<sup>*</sup>, **Junseok Ahn**<sup>*</sup>, Doyeop Kwak, Joon Son Chung, Shinji Watanabe
 
@@ -111,7 +111,7 @@ Youngjoon Jang<sup>*</sup>, Ji-Hoon Kim<sup>*</sup>, **Junseok Ahn**, Doyeop Kwa
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2024</div><img src='assets/thumbs/1_slowfastsign.png' alt="SlowFastSign" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[SlowFast Network for Continuous Sign Language Recognition](https://arxiv.org/abs/2309.12304)
+[Slowfast Network for Continuous Sign Language Recognition](https://arxiv.org/abs/2309.12304)
 
 **Junseok Ahn**<sup>*</sup>, Youngjoon Jang<sup>*</sup>, Joon Son Chung
 
