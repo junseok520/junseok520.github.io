@@ -22,9 +22,11 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Junseok Ahn"
   avatar           : "assets/profile/profile.jpg"
-  bio              : "Ph.D. Student, School of Electrical Engineering, KAIST"
-  location         : "Room 3103, N24 (LG Innovation Hall), KAIST, Daejeon, Korea"
-  employer         :
+  bio              : "Ph.D. Student at KAIST"
+  tagline          : "Building audio–visual conversational agents for natural human–AI interaction."
+  location         : "Daejeon, South Korea"
+  employer         : "Multimodal AI Lab"
+  employer_url     : "https://mm.kaist.ac.kr/"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=F1ZDPYAAAAAJ&hl=en"
   email            : "junseok@mmai.io"
