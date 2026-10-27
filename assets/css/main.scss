@@ -73,6 +73,22 @@
             min-width: 200px;
             max-width: 40%;
             order: 1;
+
+            // fixed-height frame so thumbnail aspect ratio doesn't change row height; contain keeps the whole figure
+            > div {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+                height: 180px;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
         }
         
         .paper-box-text{
