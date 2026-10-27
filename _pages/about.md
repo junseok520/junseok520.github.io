@@ -105,7 +105,7 @@ Youngjoon Jang<sup>*</sup>, Ji-Hoon Kim<sup>*</sup>, **Junseok Ahn**, Doyeop Kwa
 - *2019 - 2021* Dean's List, KAIST (Spring 2019, Spring 2020, Spring 2021)
 
 # 💻 Research Experience
-- *2025.04 - now*, Graduate Researcher, IITP-funded Project: Sign Language Video Anonymization, [KAIST Multimodal AI Lab](https://mm.kaist.ac.kr).
+- *2025.04 - now*, Graduate Researcher, [IITP](https://www.iitp.kr/eng/index.do)-funded Project: Sign Language Video Anonymization, [KAIST Multimodal AI Lab](https://mm.kaist.ac.kr).
   - Avatar-based anonymization for sign language video, preserving hand motion, body pose and facial expression; 3D motion parameter prediction integrated with 3D Gaussian Splatting avatar rendering, targeting real-time motion transfer.
 - *2023.07 - 2023.12*, Graduate Researcher, [Samsung Research](https://research.samsung.com/)–KAIST Collaboration, [KAIST Multimodal AI Lab](https://mm.kaist.ac.kr).
   - Led data curation, perceptual annotation and quality control for VoxSim (Interspeech 2024); developed WavLM- and ECAPA-TDNN-based models for perceptual speaker similarity and synthesized speech quality assessment.
