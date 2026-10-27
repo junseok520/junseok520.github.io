@@ -33,11 +33,14 @@
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ site.title }}">
 
-{% if site.author.avatar and seo_url %}
-  <meta property="og:image" content="{{ site.author.avatar | prepend: '/' | prepend: seo_url }}">
+{% assign seo_image = site.og_image | default: site.author.avatar %}
+{% if seo_image and seo_url %}
+  <meta property="og:image" content="{{ seo_image | prepend: '/' | prepend: seo_url }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="{{ site.author.name }}">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:image" content="{{ site.author.avatar | prepend: '/' | prepend: seo_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ seo_image | prepend: '/' | prepend: seo_url }}">
 {% endif %}
 
 {% if seo_url %}
