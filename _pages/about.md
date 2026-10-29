@@ -86,12 +86,23 @@ Youngjoon Jang<sup>*</sup>, Ji-Hoon Kim<sup>*</sup>, **Junseok Ahn**, Doyeop Kwa
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2024</div><img src='assets/thumbs/1_slowfastsign.png' alt="Slowfast" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[Slowfast Network for Continuous Sign Language Recognition](https://ieeexplore.ieee.org/document/10445841)
+
+**Junseok Ahn**<sup>*</sup>, Youngjoon Jang<sup>*</sup>, Joon Son Chung
+
+[**Code**](https://github.com/kaistmm/SlowFastSign)
+- Two-pathway SlowFast network capturing spatial and dynamic features for continuous sign language recognition via bi-directional fusion and pathway enhancement. Outperforms prior state of the art on PHOENIX14, PHOENIX14-T and CSL-Daily.
+</div>
+</div>
+
 ## Other Publications
 
 - `arXiv 2026` [DIAL-S2ST: Learning Latency Control for Simultaneous Speech-to-Speech Translation](https://arxiv.org/abs/2610.32214), Jeongsoo Choi, **Junseok Ahn**, Joon Son Chung
 - `arXiv 2026` [X-Dubbing: Speech-to-Speech Translation under Temporal and Visual Constraints](https://arxiv.org/abs/2610.32042), Jeongsoo Choi, Ji-Hoon Kim, **Junseok Ahn**, Joon Son Chung
 - `IEEE TMM 2026` [Deep Understanding of Sign Language for Sign to Subtitle Alignment](https://ieeexplore.ieee.org/document/11433085), Youngjoon Jang, Jeongsoo Choi, **Junseok Ahn**, Joon Son Chung
-- `ICASSP 2024` [Slowfast Network for Continuous Sign Language Recognition](https://ieeexplore.ieee.org/document/10445841), **Junseok Ahn**<sup>*</sup>, Youngjoon Jang<sup>*</sup>, Joon Son Chung \| [**Code**](https://github.com/kaistmm/SlowFastSign)
 
 <sup>*</sup> Equal contribution
 
