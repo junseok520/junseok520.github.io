@@ -15,8 +15,8 @@ I am a Ph.D. student at KAIST, advised by Professor [Joon Son Chung](https://mm.
 
 # 🔥 News
 - *2026.10*: &nbsp;🎉 Three papers are released on arXiv.
+- *2026.03*: &nbsp;🎉 One paper is accepted at IEEE Transactions on Multimedia.
 - *2025.12*: &nbsp;🎉 One paper is released on arXiv.
-- *2025.11*: &nbsp;🎉 One paper is accepted at IEEE Transactions on Multimedia.
 - *2025.03*: &nbsp;🎉 One paper is accepted as an oral presentation at ICASSP 2025.
 - *2025.03*: &nbsp;🏆 Received the Best Teaching Assistant Award from KAIST EE.
 
